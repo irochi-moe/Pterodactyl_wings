@@ -25,7 +25,7 @@ func (s *Server) PublishConsoleOutputFromDaemon(data string) {
 	})
 	s.Events().Publish(
 		ConsoleOutputEvent,
-		colorstring.Color(fmt.Sprintf("[yellow][%s Daemon]:[default] %s", appName, data)),
+		colorstring.Color(fmt.Sprintf("[yellow][bold]daemon@%s:[default] %s", appName, data)),
 	)
 }
 
