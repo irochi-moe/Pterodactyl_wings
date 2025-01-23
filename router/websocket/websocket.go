@@ -228,7 +228,7 @@ func (h *Handler) SendErrorJson(msg Message, err error, shouldLog ...bool) error
 
 	wsm := Message{
 		Event: ErrorEvent,
-		Args:  []string{"an unexpected error was encountered while handling this request"},
+		Args:  []string{"요청을 실행하는 중에 오류가 발생했습니다"},
 	}
 
 	if isJWTError || (j != nil && j.HasPermission(PermissionReceiveErrors)) {
@@ -254,7 +254,7 @@ func (h *Handler) SendErrorJson(msg Message, err error, shouldLog ...bool) error
 func (h *Handler) GetErrorMessage(msg string) (string, uuid.UUID) {
 	u := uuid.Must(uuid.NewRandom())
 
-	m := fmt.Sprintf("Error Event [%s]: %s", u.String(), msg)
+	m := fmt.Sprintf("오류 이벤트 [%s]: %s", u.String(), msg)
 
 	return m, u
 }
@@ -362,7 +362,7 @@ func (h *Handler) HandleInbound(ctx context.Context, m Message) error {
 
 			err := h.server.HandlePowerAction(action)
 			if errors.Is(err, system.ErrLockerLocked) {
-				m, _ := h.GetErrorMessage("another power action is currently being processed for this server, please try again later")
+				m, _ := h.GetErrorMessage("다른 전원 작업이 진행되고 있습니다, 잠시 후에 다시 시도해주세요")
 
 				_ = h.SendJson(Message{
 					Event: ErrorEvent,
