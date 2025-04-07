@@ -2,7 +2,7 @@ module github.com/pterodactyl/wings
 
 go 1.23.0
 
-toolchain go1.23.6
+toolchain go1.24.1
 
 require (
 	emperror.dev/errors v0.8.1
@@ -16,7 +16,7 @@ require (
 	github.com/buger/jsonparser v1.1.1
 	github.com/cenkalti/backoff/v4 v4.3.0
 	github.com/creasty/defaults v1.8.0
-	github.com/docker/docker v28.0.1+incompatible
+	github.com/docker/docker v28.0.4+incompatible
 	github.com/docker/go-connections v0.5.0
 	github.com/fatih/color v1.18.0
 	github.com/franela/goblin v0.0.0-20211003143422-0a4f594942bf
@@ -38,7 +38,7 @@ require (
 	github.com/mholt/archives v0.1.0
 	github.com/mitchellh/colorstring v0.0.0-20190213212951-d06e56a500db
 	github.com/patrickmn/go-cache v2.1.0+incompatible
-	github.com/pkg/sftp v1.13.7
+	github.com/pkg/sftp v1.13.9
 	github.com/sabhiram/go-gitignore v0.0.0-20210923224102-525f6e181f06
 	github.com/spf13/cobra v1.9.1
 	github.com/stretchr/testify v1.10.0
