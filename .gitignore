@@ -1,54 +1,45 @@
-# Binaries for programs and plugins
-*.exe
-*.dll
-*.so
-*.dylib
-.idea/*
+.gradle/
+build/
 
-# Test binary, build with `go test -c`
-*.test
+# Eclipse stuff
+.classpath
+.project
+.settings/
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# VSCode stuff
+.vscode/
 
-# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
-.glide/
+# netbeans
+nbproject/
+nbactions.xml
 
-# dep related files and folders
-/vendor*
+# vim
+.*.sw[a-p]
 
-# ignore logfiles (/* so the .gitkeep override works)
-/logs/*
+# various other potential build files
+bin/
+dist/
+manifest.mf
 
-# ignore configuration file
-/config.yml
-/config*.yml
-/config.yaml
-/config*.yaml
-
-# Ignore Vagrant stuff
-/.vagrant
-
-# Builds by gox
-/build
-
-# Go Coverage tool
-/coverage.out
-
-# The built executable
-wings
-wings.exe
-
-# IDE/Editor files (VS Code)
-/.vscode
-
-# test files
-test_*/
-
-# Keep all gitkeep files (This needs to stay at the bottom)
-!.gitkeep
-debug
+# Mac filesystem dust
+.DS_Store/
 .DS_Store
-*.pprof
-*.pdf
-pprof.*
+
+# intellij
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+# JetBrains Fleet
+.fleet/
+
+# Linux temp files
+*~
+
+# other stuff
+run/
+logs/
+
+!gradle/wrapper/gradle-wrapper.jar
